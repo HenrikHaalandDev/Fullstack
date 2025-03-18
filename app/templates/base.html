@@ -19,6 +19,16 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="backbutton">
+            <button onclick="history.back()">
+                <h2>Back</h2>
+            </button>
+        </div>
+        <div class="logo">
+            <img class="img-size" src="{{url_for('static', filename='img/SSB_logo.png') }}" alt="logo">
+        </div>
+    </div>
     {% block body %}{% endblock %}
 </body>
 

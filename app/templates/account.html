@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Make an account</title>
+{% endblock %}
+
+{% block body %}
+<div class="setcenter">
+    <div class="accountcontainer">
+        <div class="img-center">
+            <img class="" src="{{url_for('static', filename='img/SSB_logo.png') }}" alt="logo">
+        </div>
+        <br>
+        <a href="">
+            <div class="Sign-up">
+                <h1>Register</h1>
+            </div>
+        </a>
+        <br>
+        <a href="">
+            <div class="Sign-in">
+                <h1>Login</h1>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
