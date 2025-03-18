@@ -1,7 +1,11 @@
+
 from flask import Flask, request, render_template, redirect, url_for, flash, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from module import User, get_db_connection, bcrypt
 from my_secret import SECRET_KEY
+
+from flask import Flask, request, jsonify, render_template, redirect, url_for, flash, session # type: ignore
+
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY  
