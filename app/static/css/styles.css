@@ -4,3 +4,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    margin: 0%;
+    overflow: hidden;
+    background-image: linear-gradient(#ECF0F1, #2C3E50 );
+    font-family: lato, serif;
+}
+
+.setcenter {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting {
+    display: flex;
+    width: 30vw;
+    height: 8vh;
+    background-color: #2C3E50;
+    border-radius: 25px;
+    padding-inline: 1vw;
+    justify-content: center;
+    align-items: center;
+    font-family: merriweather, serif;
+}
+
+.greeting h1 {
+    text-decoration: none;
+    color: #ECF0F1;
+    
+}
