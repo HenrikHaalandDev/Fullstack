@@ -12,7 +12,7 @@ body {
     background-image: linear-gradient(#ECF0F1, #2C3E50 );
     font-family: lato, serif;
 }
-
+/* yk what a body does */
 .header {
     width: 100vw;
     height: 8vh;
@@ -24,6 +24,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* header with backbutton and logo */
 
 .header button {
     margin: 0.5%;
@@ -38,11 +40,15 @@ body {
     border: 12.5px solid #ECF0F1;
 }
 
+/* config for button in header */
+
 .logo {
     display: flex;
     justify-content: right;
     filter: invert(0)
 }
+
+/* config for company logo */
 
 .img-size {
     margin-right: 3%;
@@ -50,30 +56,42 @@ body {
     height: auto;
 }
 
+/* changing the size of the logo image */
+
 .img-center {
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* config for placing the image logo in the account page */
+
 .setcenter {
+    margin-top: 3vh;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
-.accountcontainer {
-    width: fit-content;
-    height: fit-content;
-    background-color: #ECF0F1;
-    box-shadow: 0 6px 7.5px -2px #000000;
-    padding-block: 5vh;
-    padding-inline: 2vw;
-    border-radius: 25px;
-    box-shadow: 0 10px 7.5px -2px #000000;
+/* configs where the logo and register/login buttons are */
+
+#startlowered {
+    margin-top: 30vh;
 }
+
+/* makes the greeting button lower down */
+
+.buttonorganizer {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+/* configs the buttons to stay where they should be */
 
 .greeting, .Sign-up, .Sign-in {
     display: flex;
@@ -85,13 +103,17 @@ body {
     justify-content: center;
     align-items: center;
     font-family: merriweather, serif;
+    box-shadow: 0 6px 30px -10px #ECF0F1;
 }
+
+/* button config so all buttons look the same */
+
+
 
 h1 {
     color: #ECF0F1;
 }
 
-.accountcontainer {
+/* makes all h1 tags the right colour */
 
-}
 

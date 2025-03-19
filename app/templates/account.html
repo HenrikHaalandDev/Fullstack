@@ -6,22 +6,22 @@
 
 {% block body %}
 <div class="setcenter">
-    <div class="accountcontainer">
-        <div class="img-center">
-            <img class="" src="{{url_for('static', filename='img/SSB_logo.png') }}" alt="logo">
-        </div>
-        <br>
-        <a href="">
+    <div class="img-center">
+        <img class="" src="{{url_for('static', filename='img/SSB_logo.png') }}" alt="logo">
+    </div>
+    <!-- configs the image logo to be in the center -->
+    <div class="buttonorganizer">
+        <a href="signup">
             <div class="Sign-up">
                 <h1>Register</h1>
             </div>
         </a>
-        <br>
-        <a href="">
+        <a href="signin">
             <div class="Sign-in">
                 <h1>Login</h1>
             </div>
         </a>
     </div>
+    <!-- makes the buttons where they are -->
 </div>
 {% endblock %}
