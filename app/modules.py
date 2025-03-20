@@ -16,10 +16,10 @@ class User(UserMixin):
         self.email = email
         self.password = password
 
-    def get_name_from_email(self)
-    name_part = self.email.split('@')[0]
-    name = name_part.replace('.',' ').title()
-    return name
+    def get_name_from_email(self):
+        name_part = self.email.split('@')[0]
+        name = name_part.replace('.','.').title()
+        return name
 
     @staticmethod
     def get_user_by_email(email):
@@ -36,7 +36,7 @@ class User(UserMixin):
     def get_user_by_id(user_id):
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM user WHERE id = ?" (user_id,))
+        cur.execute("SELECT * FROM user WHERE id = ?", (user_id,))
         user = cur.fetchone()
         conn.close()
         if user:
@@ -48,7 +48,7 @@ class User(UserMixin):
         hashed_pw = bcrypt.generate_password_hash(password).decode('utf-8')
         conn = get_db_connection()
         cur = conn.cursor
-        cur.execute("INSERT INTO user (email, password) VALUES (?, ?)"(email, hashed_pw))
+        cur.execute("INSERT INTO user (email, password) VALUES (?, ?)", (email, hashed_pw))
         conn.commit()
         conn.close()
 
@@ -58,7 +58,7 @@ def init_db():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS user (¨
+        CREATE TABLE IF NOT EXISTS user (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         email TEXT NOT NULL,
         password TEXT NOT NULL)
