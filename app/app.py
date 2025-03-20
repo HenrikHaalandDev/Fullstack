@@ -22,6 +22,26 @@ def load_user(user_id):
 
 @app.route('/') 
 def index():
+    return render_template('start.html')
+
+@app.route('/account')
+def account():
+    return render_template('account.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/submit')
+def submit():
     return render_template('home.html')
 
 @app.route('/account')
@@ -67,4 +87,4 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=4500)
+    app.run(debug=True)
