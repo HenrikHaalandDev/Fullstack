@@ -9,9 +9,10 @@
 body {
     margin: 0%;
     overflow: hidden;
-    background-image: linear-gradient(#ECF0F1, #2C3E50 );
+    background-image: linear-gradient(#ECF0F1, #2C3E50);
     font-family: lato, serif;
 }
+
 /* yk what a body does */
 .header {
     width: 100vw;
@@ -38,6 +39,25 @@ body {
     text-align: center;
     cursor: pointer;
     border: 12.5px solid #ECF0F1;
+}
+
+.email-text,
+.password-text {
+    display: flex;
+    border-radius: 5px;
+    width: 20vw;
+    height: 5vh;
+    font-size: 20pt;
+}
+
+.inputorganizer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+button {
+    all: unset;
 }
 
 /* config for button in header */
@@ -93,7 +113,10 @@ body {
 
 /* configs the buttons to stay where they should be */
 
-.greeting, .Sign-up, .Sign-in {
+.greeting,
+.Sign-up,
+.Sign-in,
+.loginbutton {
     display: flex;
     width: 30vw;
     height: 8vh;
@@ -104,16 +127,17 @@ body {
     align-items: center;
     font-family: merriweather, serif;
     box-shadow: 0 6px 30px -10px #ECF0F1;
+    cursor: pointer;
 }
 
 /* button config so all buttons look the same */
 
-
+#buttonfatten {
+    padding: 1%;
+}
 
 h1 {
     color: #ECF0F1;
 }
 
 /* makes all h1 tags the right colour */
-
-
