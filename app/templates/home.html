@@ -1,16 +1,30 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Fake-Forms</title>
+<title>HomePage</title>
 {% endblock %}
 
 {% block body %}
-<div class="setcenter" id="startlowered">
-    <a href="account">
-        <div class="greeting">
-            <h1>Welcome! try our Forms! ---></h1>
-        </div>
-    </a>
+<div class="setcenter">
+    <div class="img-center">
+        <img class="" src="{{url_for('static', filename='img/SSB_logo.png') }}" alt="logo">
+    </div>
+    <div class="formbuttonconfig">
+        <button onclick="notreadyyet()" class="formbutton">
+            <h1>
+                Make your own form
+            </h1>
+        </button>
+        <button onclick="notreadyyet()" class="formbutton">
+            <h1>
+                Import form
+            </h1>
+        </button>
+        <button onclick="notreadyyet()" class="formbutton">
+            <h1>
+                Try our forms
+            </h1>
+        </button>
+    </div>
 </div>
-<!-- the start button -->
 {% endblock %}

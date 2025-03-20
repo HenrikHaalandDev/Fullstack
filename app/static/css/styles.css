@@ -116,7 +116,8 @@ button {
 .greeting,
 .Sign-up,
 .Sign-in,
-.loginbutton {
+.loginbutton,
+.formbutton {
     display: flex;
     width: 30vw;
     height: 8vh;
@@ -132,6 +133,17 @@ button {
 
 /* button config so all buttons look the same */
 
+.formbuttonconfig {
+    margin-top: 2vh; 
+    display: flex;
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
 #buttonfatten {
     padding: 1%;
 }
@@ -141,3 +153,12 @@ h1 {
 }
 
 /* makes all h1 tags the right colour */
+
+.register, .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+/* fixes the placement of the input fields of login and register page */
