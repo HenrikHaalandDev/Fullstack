@@ -24,10 +24,6 @@ def load_user(user_id):
 def index():
     return render_template('start.html')
 
-@app.route('/account')
-def account():
-    return render_template('account.html')
-
 @app.route('/register')
 def register():
     return render_template('register.html')
@@ -37,6 +33,7 @@ def login():
     return render_template('login.html')
 
 @app.route('/home')
+@login_required
 def home():
     return render_template('home.html')
 
@@ -45,9 +42,7 @@ def submit():
     return render_template('home.html')
 
 @app.route('/account')
-@login_required
 def account():
- 
     return render_template('account.html')
 
 @app.route('/signin', methods=['GET', 'POST'])
@@ -59,11 +54,11 @@ def signin():
 
         if user and bcrypt.check_password_hash(user.password, password):
             login_user(user)
-            return redirect(url_for('account'))
+            return redirect(url_for('home'))
         else:
             flash('Invalid email or password', 'danger')
 
-    return render_template('signin.html')
+    return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -75,16 +70,16 @@ def signup():
         else:
             User.register_user(email, password)  # Changed to 'register_user' with email
             flash('Registration successful! Please log in.', 'success')
-            return redirect(url_for('signin'))
+            return redirect(url_for('login'))
 
-    return render_template('signup.html')
+    return render_template('register.html')
 
 @app.route('/logout', methods=['POST'])
 @login_required
 def logout():
     logout_user()
     flash("You have been logged out.", "success")
-    return redirect(url_for('home'))
+    return redirect(url_for('start'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=4500, debug=True)

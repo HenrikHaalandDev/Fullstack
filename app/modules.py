@@ -5,6 +5,7 @@ from my_secret import SECRET_KEY
 
 bcrypt = Bcrypt()
 
+
 def get_db_connection():
     conn = sqlite3.connect('db/portfolio.db')
     conn.row_factory = sqlite3.Row
@@ -25,7 +26,7 @@ class User(UserMixin):
     def get_user_by_email(email):
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM users WHERE email =?", (email,))
+        cur.execute("SELECT * FROM user WHERE email =?", (email,))
         user = cur.fetchone()
         conn.close()
         if user:
@@ -47,7 +48,7 @@ class User(UserMixin):
     def register_user(email, password):
         hashed_pw = bcrypt.generate_password_hash(password).decode('utf-8')
         conn = get_db_connection()
-        cur = conn.cursor
+        cur = conn.cursor()
         cur.execute("INSERT INTO user (email, password) VALUES (?, ?)", (email, hashed_pw))
         conn.commit()
         conn.close()
