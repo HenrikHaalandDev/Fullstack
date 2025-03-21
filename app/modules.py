@@ -64,10 +64,15 @@ def init_db():
         email TEXT NOT NULL,
         password TEXT NOT NULL)
     """)
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS formanswer (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        experience TEXT NOT NULL,
+        reuse TEXT NOT NULL)
+    """)
     conn.commit()
     conn.close()
     print("Database initialized successfully")
-
 
 if __name__ == "__main__":
     init_db()

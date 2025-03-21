@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Make an account</title>
+{% endblock %}
+
+{% block body %}
+<div class="setcenter">
+    <form action="/action_page.php">
+        <div class="formdirection">
+            <p>How was your experience of this website?</p>
+            <div class="formanswer">
+                <input type="radio" id="bad" name="experience" value="bad">
+                <label for="html">Bad</label>
+            </div>
+            <div class="formanswer">
+                <input type="radio" id="okay" name="experience" value="okay">
+                <label for="css">Okay</label>
+            </div>
+            <div class="formanswer">
+                <input type="radio" id="good" name="experience" value="good">
+                <label for="javascript">Good</label>
+            </div>
+
+            <p>would you use it again?:</p>
+            <div class="formanswer">
+                <input type="radio" id="no" name="reuse" value="no">
+                <label for="age1">No</label>
+            </div>
+            <div class="formanswer">
+                <input type="radio" id="maybe" name="reuse" value="maybe">
+                <label for="age2">Maybe</label>
+            </div>
+            <div class="formanswer">
+                <input type="radio" id="yes" name="reuse" value="yes">
+                <label for="age3">Yes</label>
+            </div>
+            <button class="formbutton" type="submit" value="Submit">
+                <h1>
+                    Submit
+                </h1>
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -162,3 +162,13 @@ h1 {
 }
 
 /* fixes the placement of the input fields of login and register page */
+
+.formdirection {
+    display: flex;
+    flex-direction: column;
+}
+
+.formanswer {
+    display: flex;
+    flex-direction: row;
+}
